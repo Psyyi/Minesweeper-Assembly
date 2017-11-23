@@ -1,6 +1,6 @@
     B main
 
-test    DEFB "A message to fill the screen\n,0
+test    DEFB "A message to fill the screen\n",0
 prompt  DEFB "Press any key to clear the screen...\n",0
 
     ALIGN
