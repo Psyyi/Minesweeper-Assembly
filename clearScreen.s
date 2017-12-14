@@ -2,6 +2,7 @@
 
 test    DEFB "A message to fill the screen\n",0
 prompt  DEFB "Press any key to clear the screen...\n",0
+clearline DEFB "\n\n",0
 
     ALIGN
 main    MOV R7,#15
@@ -14,7 +15,7 @@ mLoop   ADR R0, test
         SWI 3
         SWI 1
         BL clearScreen
-        SWI2
+        SWI 2
 
 
 
@@ -22,5 +23,14 @@ mLoop   ADR R0, test
 ; Input:  none
 ; Output: none
 clearScreen
+    MOV R1,#0
+    ADR R0,clearline
+B clearcon
+loop
+    SWI 3
+clearcon
+    ADD R1,R1,#1
+    CMP R1,#50
+    BNE loop
 
     MOV PC, R14
