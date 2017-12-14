@@ -32,7 +32,7 @@ ADR R0,clearline
     SWI 3
 clearcon
     ADD R1,R1,#1
-    CMP R1,#101
+    CMP R1,#1001
     BNE loop
 
     MOV PC, R14
