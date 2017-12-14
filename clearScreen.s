@@ -27,6 +27,7 @@ clearScreen
     ADR R0,clearline
 B clearcon
 loop
+ADR R0,clearline
     SWI 3
 clearcon
     ADD R1,R1,#1
