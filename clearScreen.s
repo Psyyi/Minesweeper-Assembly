@@ -30,7 +30,7 @@ loop
     SWI 3
 clearcon
     ADD R1,R1,#1
-    CMP R1,#100
+    CMP R1,#1000
     BNE loop
 
     MOV PC, R14
