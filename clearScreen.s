@@ -29,11 +29,10 @@ clearScreen
 B clearcon
 loop
 
-ADR R0,clearline
     SWI 3
 clearcon
     ADD R1,R1,#1
-    CMP R1,#1000
+    CMP R1,#100
     BNE loop
     SWI 3
     MOV PC, R14
