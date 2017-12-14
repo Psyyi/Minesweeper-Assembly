@@ -24,7 +24,6 @@ mLoop   ADR R0, test
 ; Output: none
 clearScreen
     MOV R1,#0
-    ADR R0,clearline
 B clearcon
 loop
     MOV R0,#10
